@@ -6,6 +6,7 @@ import 'Qibla/qibla_page.dart';
 import 'Quran/quran_view.dart';
 import 'Sibha/tasbih_page.dart';
 import 'Tracker/habet_tracker_home.dart';
+import 'core/splash.dart';
 
 void main() {
   runApp(const MyApp());
@@ -28,7 +29,7 @@ class MyApp extends StatelessWidget {
       ),
       title: 'Islamic Prayer App',
       debugShowCheckedModeBanner: false,
-      home: MainPage(),
+      home: SplashScreen(),
     );
   }
 }
