@@ -12,7 +12,7 @@ class SplashScreen extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         body: Image.asset(
-            fit: BoxFit.fitWidth,
+            fit: BoxFit.cover,
             height: double.infinity,
             width: double.infinity,
             "assets/images/la7azatzekr.jpg"),

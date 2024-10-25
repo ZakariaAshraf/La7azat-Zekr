@@ -46,7 +46,6 @@ class _TasbihPageState extends State<TasbihPage> {
           fontWeight: FontWeight.bold,
         ) ,
         ),
-        backgroundColor: Colors.green,
       ),
       body: Center(
         child: Padding(

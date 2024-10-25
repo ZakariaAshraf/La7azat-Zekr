@@ -26,7 +26,7 @@ class _AzkarScreenState extends State<AzkarScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFF5F5F5),
+      backgroundColor: Colors.grey[850],
       appBar: AppBar(
         title: const Text(
           "أذكار المسلم",
@@ -37,7 +37,7 @@ class _AzkarScreenState extends State<AzkarScreen> {
           ),
         ),
         centerTitle: true,
-        backgroundColor: Colors.green,
+        backgroundColor: Colors.teal,
         elevation: 5,
       ),
       body: sections.isEmpty
@@ -79,7 +79,7 @@ class _AzkarScreenState extends State<AzkarScreen> {
           padding: const EdgeInsets.all(20.0),
           decoration: BoxDecoration(
             gradient: const LinearGradient(
-              colors: [Colors.green, Colors.lightBlueAccent],
+              colors: [Colors.teal, Colors.blueGrey],
               begin: Alignment.topRight,
               end: Alignment.bottomLeft,
             ),

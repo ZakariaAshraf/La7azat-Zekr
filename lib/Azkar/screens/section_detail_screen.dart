@@ -100,7 +100,7 @@ class _SectionDetailScreenState extends State<SectionDetailScreen> {
   Widget buildDetailTile(SectionDetailModel detail) {
     return Container(
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: Colors.grey[850],
         boxShadow: [
           BoxShadow(
             color: Colors.grey.withOpacity(0.5),
@@ -114,12 +114,12 @@ class _SectionDetailScreenState extends State<SectionDetailScreen> {
         title: Text(
           detail.reference ?? '',
           textDirection: TextDirection.rtl,
-          style: TextStyle(color: Colors.black),
+          style: TextStyle(color: Colors.white),
         ),
         subtitle: Text(
           detail.content ?? '',
           textDirection: TextDirection.rtl,
-          style: const TextStyle(fontSize: 20,color: Colors.black),
+          style: const TextStyle(fontSize: 20,color: Colors.white),
         ),
       ),
     );

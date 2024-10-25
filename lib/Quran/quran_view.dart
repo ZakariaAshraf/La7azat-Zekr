@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:la7azat_zekr_v3/Quran/quran_details_view.dart';
 import 'package:la7azat_zekr_v3/Quran/widget/quran_item.dart';
@@ -128,7 +126,7 @@ class QuranView extends StatelessWidget {
     ];
     return Scaffold(
       appBar: AppBar(),
-      backgroundColor: Colors.green,
+      backgroundColor: Colors.grey[850],
       body: Column(
         children: [
           Container(),
@@ -170,24 +168,24 @@ class QuranView extends StatelessWidget {
           ),
           Expanded(
               child: ListView.builder(
-            itemCount: 114,
-            itemBuilder: (context, index) => GestureDetector(
-              onTap: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => QuranDetailsView(),
-                        settings: RouteSettings(
-                            arguments: SuraDetails(
-                                suraName: SuraNames[index],
-                                suraNumber: "${index + 1}"))));
-              },
-              child: QuranItem(
-                SuraName: SuraNames[index],
-                SuraNumber: "${index + 1}",
-              ),
-            ),
-          ))
+                itemCount: 114,
+                itemBuilder: (context, index) => GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => QuranDetailsView(),
+                            settings: RouteSettings(
+                                arguments: SuraDetails(
+                                    suraName: SuraNames[index],
+                                    suraNumber: "${index + 1}"))));
+                  },
+                  child: QuranItem(
+                    SuraName: SuraNames[index],
+                    SuraNumber: "${index + 1}",
+                  ),
+                ),
+              ))
         ],
       ),
     );

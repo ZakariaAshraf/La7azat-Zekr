@@ -38,7 +38,7 @@ class _QuranDetailsViewState extends State<QuranDetailsView> {
           padding: EdgeInsets.symmetric(vertical: 40, horizontal: 15),
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(25),
-              color: Color(0xffF8F8F8).withOpacity(0.8)),
+              color:Colors.green.withOpacity(0.8)),
           child: Column(
             children: [
               Row(
@@ -47,10 +47,6 @@ class _QuranDetailsViewState extends State<QuranDetailsView> {
                   Text("سورة${args.suraName}"),
                   SizedBox(
                     width: 5,
-                  ),
-                  Icon(
-                    Icons.play_circle,
-                    size: 32,
                   ),
                 ],
               ),

@@ -21,10 +21,18 @@ class _HabitTrackerHomeState extends State<HabitTrackerHome> {
 
   void _addHabit(Habit habit) {
     setState(() {
-      if (habitHistory[_selectedDay] == null) {
-        habitHistory[_selectedDay] = [];
-      }
+      habitHistory[_selectedDay] ??= [];
       habitHistory[_selectedDay]!.add(habit);
+    });
+  }
+
+  void _deleteHabit(Habit habit) {
+    setState(() {
+      habitHistory[_selectedDay]?.remove(habit);
+      // Optionally clean up empty days from the map
+      if (habitHistory[_selectedDay]?.isEmpty ?? false) {
+        habitHistory.remove(_selectedDay);
+      }
     });
   }
 
@@ -53,6 +61,7 @@ class _HabitTrackerHomeState extends State<HabitTrackerHome> {
           Expanded(
             child: HabitList(
               habits: _getHabitsForDay(_selectedDay),
+              onHabitDeleted: _deleteHabit, // Pass the delete function here
             ),
           ),
         ],
@@ -61,7 +70,7 @@ class _HabitTrackerHomeState extends State<HabitTrackerHome> {
         onPressed: () {
           _showAddHabitDialog(context);
         },
-        backgroundColor: Colors.green,
+        backgroundColor: Colors.teal,
         child: Icon(Icons.add),
       ),
     );
